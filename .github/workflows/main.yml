@@ -1,0 +1,22 @@
+name: PGATS AUT-WEB
+
+on:
+  workflow_dispatch:
+
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clone do projeto para a máqui
+      - uses: actions/checkout@v4
+
+      #Conferir a versão instalada
+      - name: Node version
+        run: node --version
+
+      - name: Instalando dependências
+        run: npm install
+
+      - name: Executando os testes
+        run: npx cypress run
