@@ -1,8 +1,8 @@
 /// <reference types="cypress" />"
-import data from "../fixtures/example.json";
-import menu from "../modules/menu/menu";
-import login from "../modules/login/login";
-import cadastro from "../modules/cadastro/cadastro";
+import data from "../../fixtures/example.json";
+import menu from "../../modules/menu/menu";
+import login from "../../modules/login/login";
+import cadastro from "../../modules/cadastro/cadastro";
 
 describe("Validações de usuário", () => {
   beforeEach(() => {
@@ -46,7 +46,7 @@ describe("Validações de usuário", () => {
   it("Logar com email existente", () => {
     cy.get('input[data-qa="signup-name"]').type("QA PAGTS ANA");
     cy.get('input[data-qa="signup-email"]').type(
-      "qatester1761180592515@qatester.com.br"
+      "qatesterpgats.Ward@yahoo.com"
     );
     cy.contains("button", "Signup").click();
     cy.get(".signup-form > form > p").should(

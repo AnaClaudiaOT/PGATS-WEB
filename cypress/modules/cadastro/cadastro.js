@@ -21,6 +21,14 @@ class Cadastro {
     cy.get('[data-qa="mobile_number"]').type("5511970707070");
     cy.get('[data-qa="create-account"]').click();
   }
+
+  deletarConta() {
+    cy.get('a[href="/delete_account"]').click();
+  }
+
+  clicarNoBotaoContinuar() {
+    cy.get('[data-qa="continue-button"]').click();
+  }
 }
 
 export default new Cadastro();

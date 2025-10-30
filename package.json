@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "test:exercicios": "cypress run --spec \"cypress/e2e/exercicio*.cy.js\"",
+    "test:trabalho-final": "cypress run --spec \"cypress/e2e/trabalho-final/**/*.cy.js\"",
+    "test:report": "cypress run --reporter cypress-mochawesome-reporter"
   },
   "keywords": [],
   "author": "",

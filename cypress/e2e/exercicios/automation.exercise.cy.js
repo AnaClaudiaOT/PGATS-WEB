@@ -1,6 +1,6 @@
 /// <reference types="cypress" />"
 
-import { getRandomEmail } from "../support/helpers";
+import { getRandomEmail } from "../../support/helpers";
 
 import { faker } from "@faker-js/faker";
 
@@ -42,9 +42,7 @@ describe("Validações de usuário", () => {
   });
 
   it("Logar com usuário", () => {
-    cy.get('[data-qa="login-email"]').type(
-      "qatester1761180592515@qatester.com.br"
-    );
+    cy.get('[data-qa="login-email"]').type("qatesterpgats.Ward@yahoo.com");
     cy.get('[data-qa="login-password"]').type("123456");
     cy.get('[data-qa="login-button"]').click();
     cy.get("i.fa-user").parent().should("contain", "QA PAGTS ANA");
@@ -56,9 +54,7 @@ describe("Validações de usuário", () => {
   });
 
   it("Logar com senha incorreta", () => {
-    cy.get('[data-qa="login-email"]').type(
-      "qatester1761180592515@qatester.com.br"
-    );
+    cy.get('[data-qa="login-email"]').type("qatesterpgats.Ward@yahoo.com");
     cy.get('[data-qa="login-password"]').type("12345");
     cy.get('[data-qa="login-button"]').click();
     cy.get(".login-form > form > p").should(
@@ -68,9 +64,7 @@ describe("Validações de usuário", () => {
   });
 
   it("Loggout de usuário", () => {
-    cy.get('[data-qa="login-email"]').type(
-      "qatester1761180592515@qatester.com.br"
-    );
+    cy.get('[data-qa="login-email"]').type("qatesterpgats.Ward@yahoo.com");
     cy.get('[data-qa="login-password"]').type("123456");
     cy.get('[data-qa="login-button"]').click();
     cy.get("i.fa-user").parent().should("contain", "QA PAGTS ANA");
@@ -81,7 +75,7 @@ describe("Validações de usuário", () => {
   it("Logar com email existente", () => {
     cy.get('input[data-qa="signup-name"]').type("QA PAGTS ANA");
     cy.get('input[data-qa="signup-email"]').type(
-      "qatester1761180592515@qatester.com.br"
+      "qatesterpgats.Ward@yahoo.com"
     );
     cy.contains("button", "Signup").click();
     cy.get(".signup-form > form > p").should(
