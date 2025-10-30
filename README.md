@@ -41,7 +41,7 @@ PGATS-WEB/
 │   │   ├── exercicio*.cy.js    # Exercícios do curso
 │   │   └── trabalho-final/     # Testes do trabalho final
 │   ├── fixtures/               # Arquivos de dados para testes
-│   ├── modules/                # Módulos com Page Objects
+│   ├── modules/                # Módulos
 │   │   ├── cadastro/
 │   │   ├── login/
 │   │   └── menu/
