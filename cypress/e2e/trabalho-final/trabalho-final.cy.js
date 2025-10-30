@@ -6,7 +6,7 @@ import cadastro from "../../modules/cadastro/cadastro";
 import contato from "../../modules/contato/contato";
 import produtos from "../../modules/produtos/produtos";
 
-describe("Validações de usuário", () => {
+describe("Validações Site Automation Exercise", () => {
   beforeEach(() => {
     cy.visit("https://automationexercise.com");
     menu.navegarParaLogin();
@@ -156,24 +156,5 @@ describe("Validações de usuário", () => {
     cy.get('[data-qa="account-deleted"]').contains("Account Deleted!");
 
     cadastro.clicarNoBotaoContinuar();
-
-    //     1. Iniciar navegador
-    // 2 . Navegar para url ´http://automationexercise.com'
-    // 3 . Verifique se a página inicial está visível com sucesso
-    // 4 . Clique no botão 'Signup / Login'
-    // 5 . Preencha todos os detalhes em Inscrição e crie conta
-    // 6 . Verifique 'CONTA CRIADA!' e clique no botão 'Continuar'
-    // 7 . Verifique 'Logado como nome de usuário' no topo
-    // 8 . Adicionar produtos ao carrinho
-    // 9 . Clique no botão 'Carrinho'
-    // 10 . Verifique se a página do carrinho está sendo exibida
-    // 11 . Clique em Prossiga para checkout
-    // 12 . Verifique os Detalhes do Endereço e Reveja Seu Pedido
-    // 13 . Digite descrição na área de texto do comentário e clique em 'Colocar Ordem'
-    // 14 . Insira os dados de pagamento: Nome no Cartão, Número do Cartão, CVC, Data de validade
-    // 15 . Clique no botão 'Pagar e Confirmar Pedido'
-    // 16 . Verifique a mensagem de sucesso 'Seu pedido foi feito com sucesso!'
-    // 17 . Clique no botão 'Excluir Conta'
-    // 18 . Verifique 'CONTA EXCLUÍDA!' e clique no botão 'Continuar'
   });
 });
